@@ -1,0 +1,570 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B46712D1D1641D8009375C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B46712C1D1641D8009375C4 /* AppDelegate.swift */; };
+		3B46712F1D1641D8009375C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B46712E1D1641D8009375C4 /* ViewController.swift */; };
+		3B4671321D1641D8009375C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B4671301D1641D8009375C4 /* Main.storyboard */; };
+		3B4671341D1641D8009375C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B4671331D1641D8009375C4 /* Assets.xcassets */; };
+		3B4671371D1641D8009375C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B4671351D1641D8009375C4 /* LaunchScreen.storyboard */; };
+		3B4671451D164246009375C4 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4671441D164246009375C4 /* IntentHandler.swift */; };
+		3B46714E1D164246009375C4 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B46714D1D164246009375C4 /* IntentsUI.framework */; };
+		3B4671511D164246009375C4 /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4671501D164246009375C4 /* IntentViewController.swift */; };
+		3B4671541D164246009375C4 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B4671521D164246009375C4 /* MainInterface.storyboard */; };
+		3B4671581D164246009375C4 /* HoundKitSiriExtensionUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3B46714B1D164246009375C4 /* HoundKitSiriExtensionUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3B46715B1D164246009375C4 /* HoundKitSiriExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3B4671421D164246009375C4 /* HoundKitSiriExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3B4671641D164276009375C4 /* HoundKitSendMessageIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4671631D164276009375C4 /* HoundKitSendMessageIntentHandler.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B4671561D164246009375C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B4671211D1641D8009375C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B46714A1D164246009375C4;
+			remoteInfo = HoundKitSiriExtensionUI;
+		};
+		3B4671591D164246009375C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B4671211D1641D8009375C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B4671411D164246009375C4;
+			remoteInfo = HoundKitSiriExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3B4671621D164246009375C4 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3B4671581D164246009375C4 /* HoundKitSiriExtensionUI.appex in Embed App Extensions */,
+				3B46715B1D164246009375C4 /* HoundKitSiriExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3B4671291D1641D8009375C4 /* HoundKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoundKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B46712C1D1641D8009375C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3B46712E1D1641D8009375C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3B4671311D1641D8009375C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3B4671331D1641D8009375C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B4671361D1641D8009375C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3B4671381D1641D8009375C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B4671421D164246009375C4 /* HoundKitSiriExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HoundKitSiriExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B4671441D164246009375C4 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		3B4671461D164246009375C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B46714B1D164246009375C4 /* HoundKitSiriExtensionUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HoundKitSiriExtensionUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B46714D1D164246009375C4 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		3B4671501D164246009375C4 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
+		3B4671531D164246009375C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		3B4671551D164246009375C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B4671631D164276009375C4 /* HoundKitSendMessageIntentHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoundKitSendMessageIntentHandler.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B4671261D1641D8009375C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B46713F1D164246009375C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B4671481D164246009375C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B46714E1D164246009375C4 /* IntentsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B4671201D1641D8009375C4 = {
+			isa = PBXGroup;
+			children = (
+				3B46712B1D1641D8009375C4 /* HoundKit */,
+				3B4671431D164246009375C4 /* HoundKitSiriExtension */,
+				3B46714F1D164246009375C4 /* HoundKitSiriExtensionUI */,
+				3B46714C1D164246009375C4 /* Frameworks */,
+				3B46712A1D1641D8009375C4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3B46712A1D1641D8009375C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B4671291D1641D8009375C4 /* HoundKit.app */,
+				3B4671421D164246009375C4 /* HoundKitSiriExtension.appex */,
+				3B46714B1D164246009375C4 /* HoundKitSiriExtensionUI.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B46712B1D1641D8009375C4 /* HoundKit */ = {
+			isa = PBXGroup;
+			children = (
+				3B46712C1D1641D8009375C4 /* AppDelegate.swift */,
+				3B46712E1D1641D8009375C4 /* ViewController.swift */,
+				3B4671301D1641D8009375C4 /* Main.storyboard */,
+				3B4671331D1641D8009375C4 /* Assets.xcassets */,
+				3B4671351D1641D8009375C4 /* LaunchScreen.storyboard */,
+				3B4671381D1641D8009375C4 /* Info.plist */,
+			);
+			path = HoundKit;
+			sourceTree = "<group>";
+		};
+		3B4671431D164246009375C4 /* HoundKitSiriExtension */ = {
+			isa = PBXGroup;
+			children = (
+				3B4671441D164246009375C4 /* IntentHandler.swift */,
+				3B4671461D164246009375C4 /* Info.plist */,
+				3B4671631D164276009375C4 /* HoundKitSendMessageIntentHandler.swift */,
+			);
+			path = HoundKitSiriExtension;
+			sourceTree = "<group>";
+		};
+		3B46714C1D164246009375C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B46714D1D164246009375C4 /* IntentsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B46714F1D164246009375C4 /* HoundKitSiriExtensionUI */ = {
+			isa = PBXGroup;
+			children = (
+				3B4671501D164246009375C4 /* IntentViewController.swift */,
+				3B4671521D164246009375C4 /* MainInterface.storyboard */,
+				3B4671551D164246009375C4 /* Info.plist */,
+			);
+			path = HoundKitSiriExtensionUI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B4671281D1641D8009375C4 /* HoundKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B46713B1D1641D8009375C4 /* Build configuration list for PBXNativeTarget "HoundKit" */;
+			buildPhases = (
+				3B4671251D1641D8009375C4 /* Sources */,
+				3B4671261D1641D8009375C4 /* Frameworks */,
+				3B4671271D1641D8009375C4 /* Resources */,
+				3B4671621D164246009375C4 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B4671571D164246009375C4 /* PBXTargetDependency */,
+				3B46715A1D164246009375C4 /* PBXTargetDependency */,
+			);
+			name = HoundKit;
+			productName = HoundKit;
+			productReference = 3B4671291D1641D8009375C4 /* HoundKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3B4671411D164246009375C4 /* HoundKitSiriExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B46715F1D164246009375C4 /* Build configuration list for PBXNativeTarget "HoundKitSiriExtension" */;
+			buildPhases = (
+				3B46713E1D164246009375C4 /* Sources */,
+				3B46713F1D164246009375C4 /* Frameworks */,
+				3B4671401D164246009375C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HoundKitSiriExtension;
+			productName = HoundKitSiriExtension;
+			productReference = 3B4671421D164246009375C4 /* HoundKitSiriExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		3B46714A1D164246009375C4 /* HoundKitSiriExtensionUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B46715C1D164246009375C4 /* Build configuration list for PBXNativeTarget "HoundKitSiriExtensionUI" */;
+			buildPhases = (
+				3B4671471D164246009375C4 /* Sources */,
+				3B4671481D164246009375C4 /* Frameworks */,
+				3B4671491D164246009375C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HoundKitSiriExtensionUI;
+			productName = HoundKitSiriExtensionUI;
+			productReference = 3B46714B1D164246009375C4 /* HoundKitSiriExtensionUI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B4671211D1641D8009375C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Colin King";
+				TargetAttributes = {
+					3B4671281D1641D8009375C4 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 33QFCS9J52;
+						DevelopmentTeamName = "Colin King (Personal Team)";
+						ProvisioningStyle = Automatic;
+					};
+					3B4671411D164246009375C4 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 33QFCS9J52;
+						DevelopmentTeamName = "Colin King (Personal Team)";
+						ProvisioningStyle = Automatic;
+					};
+					3B46714A1D164246009375C4 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 33QFCS9J52;
+						DevelopmentTeamName = "Colin King (Personal Team)";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3B4671241D1641D8009375C4 /* Build configuration list for PBXProject "HoundKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3B4671201D1641D8009375C4;
+			productRefGroup = 3B46712A1D1641D8009375C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B4671281D1641D8009375C4 /* HoundKit */,
+				3B4671411D164246009375C4 /* HoundKitSiriExtension */,
+				3B46714A1D164246009375C4 /* HoundKitSiriExtensionUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B4671271D1641D8009375C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4671371D1641D8009375C4 /* LaunchScreen.storyboard in Resources */,
+				3B4671341D1641D8009375C4 /* Assets.xcassets in Resources */,
+				3B4671321D1641D8009375C4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B4671401D164246009375C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B4671491D164246009375C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4671541D164246009375C4 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B4671251D1641D8009375C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B46712F1D1641D8009375C4 /* ViewController.swift in Sources */,
+				3B46712D1D1641D8009375C4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B46713E1D164246009375C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4671641D164276009375C4 /* HoundKitSendMessageIntentHandler.swift in Sources */,
+				3B4671451D164246009375C4 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B4671471D164246009375C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B4671511D164246009375C4 /* IntentViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B4671571D164246009375C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B46714A1D164246009375C4 /* HoundKitSiriExtensionUI */;
+			targetProxy = 3B4671561D164246009375C4 /* PBXContainerItemProxy */;
+		};
+		3B46715A1D164246009375C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B4671411D164246009375C4 /* HoundKitSiriExtension */;
+			targetProxy = 3B4671591D164246009375C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3B4671301D1641D8009375C4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B4671311D1641D8009375C4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3B4671351D1641D8009375C4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B4671361D1641D8009375C4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3B4671521D164246009375C4 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B4671531D164246009375C4 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3B4671391D1641D8009375C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3B46713A1D1641D8009375C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3B46713C1D1641D8009375C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HoundKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.colinking.HoundKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3B46713D1D1641D8009375C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HoundKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.colinking.HoundKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		3B46715D1D164246009375C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HoundKitSiriExtensionUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.colinking.HoundKit.HoundKitSiriExtensionUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3B46715E1D164246009375C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HoundKitSiriExtensionUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.colinking.HoundKit.HoundKitSiriExtensionUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		3B4671601D164246009375C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HoundKitSiriExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.colinking.HoundKit.HoundKitSiriExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3B4671611D164246009375C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HoundKitSiriExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.colinking.HoundKit.HoundKitSiriExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B4671241D1641D8009375C4 /* Build configuration list for PBXProject "HoundKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B4671391D1641D8009375C4 /* Debug */,
+				3B46713A1D1641D8009375C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B46713B1D1641D8009375C4 /* Build configuration list for PBXNativeTarget "HoundKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B46713C1D1641D8009375C4 /* Debug */,
+				3B46713D1D1641D8009375C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3B46715C1D164246009375C4 /* Build configuration list for PBXNativeTarget "HoundKitSiriExtensionUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B46715D1D164246009375C4 /* Debug */,
+				3B46715E1D164246009375C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3B46715F1D164246009375C4 /* Build configuration list for PBXNativeTarget "HoundKitSiriExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B4671601D164246009375C4 /* Debug */,
+				3B4671611D164246009375C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3B4671211D1641D8009375C4 /* Project object */;
+}
