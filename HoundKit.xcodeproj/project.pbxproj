@@ -19,6 +19,9 @@
 		3B0AF9611D1681C4001A0B7B /* HKSendMessageIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0AF9601D1681C4001A0B7B /* HKSendMessageIntentHandler.swift */; };
 		3B0AF9651D1682A5001A0B7B /* houndify-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0AF9641D1682A5001A0B7B /* houndify-bg.png */; };
 		3B0AF9691D168D61001A0B7B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0AF9681D168D61001A0B7B /* MainInterface.storyboard */; };
+		3B0AF9711D16955C001A0B7B /* chatmockdraft2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0AF9701D16955C001A0B7B /* chatmockdraft2.png */; };
+		3B0AF9731D16964D001A0B7B /* query1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0AF9721D16964D001A0B7B /* query1.png */; };
+		3B0AF9751D1697FD001A0B7B /* query2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0AF9741D1697FD001A0B7B /* query2.png */; };
 		3B46712D1D1641D8009375C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B46712C1D1641D8009375C4 /* AppDelegate.swift */; };
 		3B46712F1D1641D8009375C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B46712E1D1641D8009375C4 /* ViewController.swift */; };
 		3B4671321D1641D8009375C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B4671301D1641D8009375C4 /* Main.storyboard */; };
@@ -94,6 +97,10 @@
 		3B0AF9601D1681C4001A0B7B /* HKSendMessageIntentHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKSendMessageIntentHandler.swift; sourceTree = "<group>"; };
 		3B0AF9641D1682A5001A0B7B /* houndify-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "houndify-bg.png"; sourceTree = "<group>"; };
 		3B0AF9681D168D61001A0B7B /* MainInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		3B0AF96A1D16906F001A0B7B /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		3B0AF9701D16955C001A0B7B /* chatmockdraft2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatmockdraft2.png; sourceTree = "<group>"; };
+		3B0AF9721D16964D001A0B7B /* query1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = query1.png; sourceTree = "<group>"; };
+		3B0AF9741D1697FD001A0B7B /* query2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = query2.png; sourceTree = "<group>"; };
 		3B4671291D1641D8009375C4 /* HoundKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoundKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B46712C1D1641D8009375C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B46712E1D1641D8009375C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +173,9 @@
 		3B0AF9621D16820F001A0B7B /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				3B0AF9741D1697FD001A0B7B /* query2.png */,
+				3B0AF9721D16964D001A0B7B /* query1.png */,
+				3B0AF9701D16955C001A0B7B /* chatmockdraft2.png */,
 				3B0AF9681D168D61001A0B7B /* MainInterface.storyboard */,
 				3B0AF9641D1682A5001A0B7B /* houndify-bg.png */,
 				3B0AF94B1D1680B2001A0B7B /* Info.plist */,
@@ -221,6 +231,7 @@
 		3B46714C1D164246009375C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3B0AF96A1D16906F001A0B7B /* Intents.framework */,
 				3B472CD11D165070009B70A5 /* HoundKitCore */,
 				3B46714D1D164246009375C4 /* IntentsUI.framework */,
 			);
@@ -395,10 +406,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B0AF9731D16964D001A0B7B /* query1.png in Resources */,
 				3B0AF95A1D1680D0001A0B7B /* chatmock.png in Resources */,
 				3B0AF9691D168D61001A0B7B /* MainInterface.storyboard in Resources */,
 				3B0AF9651D1682A5001A0B7B /* houndify-bg.png in Resources */,
+				3B0AF9751D1697FD001A0B7B /* query2.png in Resources */,
 				3B0AF95B1D1680D0001A0B7B /* chatmockdraft.png in Resources */,
+				3B0AF9711D16955C001A0B7B /* chatmockdraft2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

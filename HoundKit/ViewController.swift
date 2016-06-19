@@ -12,6 +12,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //let vocabulary = INVocabulary.shared()
+        //vocabulary.setVocabularyStrings(["Hound"], of: .contactName)
         // Do any additional setup after loading the view, typically from a nib.
     }
 

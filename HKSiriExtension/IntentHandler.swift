@@ -15,6 +15,7 @@ import Intents
 class IntentHandler: INExtension {
     
     override func handler(for intent: INIntent) -> AnyObject? {
+        
         if intent is INSendMessageIntent {
             return HKSendMessageIntentHandler()
         }

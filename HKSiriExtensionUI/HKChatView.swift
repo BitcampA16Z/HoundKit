@@ -48,7 +48,7 @@ class HKChatView: UIView {
     }
     
     override init (frame: CGRect) {
-        draftMock = HKChatView.resolveImage(imageName: "houndify-bg")
+        draftMock = HKChatView.resolveImage(imageName: "query2.png")
         sentMock = HKChatView.resolveImage(imageName: "chatmock.png")
         
         mockView = UIImageView(image: draftMock)
@@ -61,8 +61,15 @@ class HKChatView: UIView {
         super.init(frame: frame)
         
         print("Initing ChatView")
-        print("Well hoping for the storyboard")
+        
+        let queryLabel = UILabel()
+        queryLabel.numberOfLines = 1
+        queryLabel.text = "QUERY:"
+        queryLabel.font = UIFont(name: "KohinoorBangla-Semibold", size: 24.0)
+        queryLabel.frame = CGRect(x: 10.0, y: 45.0, width: 100.0, height: 40.0)
+        
         self.addSubview(mockView)
+//        self.addSubview(queryLabel)
         self.addSubview(contentLabel)
     }
     
