@@ -10,7 +10,6 @@ import UIKit
 
 class HKChatView: UIView {
     
-    var contentLabel: UILabel
     var mockView: UIImageView
     
     var queryLabel: UILabel
@@ -25,7 +24,7 @@ class HKChatView: UIView {
             print("content set")
             print(newContent)
             if newContent != content {
-                self.setNeedsLayout()
+//                self.setNeedsLayout()
             }
         }
     }
@@ -33,11 +32,9 @@ class HKChatView: UIView {
     var isSent: Boolean = false {
         willSet(newSentValue) {
             mockView.image = newSentValue.boolValue ? sentMock : draftMock
-            print("setting is sent")
-            print(isSent)
-            print(newSentValue)
+            print("setting isSent: " + isSent.boolValue.description + " -> " + newSentValue.boolValue.description)
             if newSentValue.boolValue != isSent.boolValue {
-                self.setNeedsLayout()
+//                self.setNeedsLayout()
             }
         }
     }
@@ -58,29 +55,22 @@ class HKChatView: UIView {
         mockView = UIImageView(image: draftMock)
         mockView.contentMode = UIViewContentMode.scaleAspectFill
         
-        contentLabel = UILabel()
-        contentLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
-        contentLabel.numberOfLines = 0
-        
         queryLabel = UILabel()
         
         super.init(frame: frame)
         
-        print("Initing ChatView")
-        
         self.addSubview(mockView)
-        self.addSubview(contentLabel)
         self.addSubview(queryLabel)
         
         addViewContent()
     }
     
     convenience init () {
-        print("convenience constructor")
         self.init(frame:CGRect.zero)
     }
     
     required init?(coder aDecoder: NSCoder) {
+        // We don't need this
         fatalError("This class does not support NSCoding")
     }
     
@@ -94,8 +84,10 @@ class HKChatView: UIView {
         
         if let content = self.content {
             queryLabel.text = content
-//            contentLabel.text = content
-//            contentLabel.frame = CGRect(x: 113.0, y: 85.0, width: 150.0, height: 75.0)
+            if (self.isSent) {
+                queryLabel.text! += " (SENT)"
+            }
+            
         } else {
             queryLabel.text = "Ask me anything..."
         }

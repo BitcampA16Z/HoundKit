@@ -10,9 +10,14 @@ import UIKit
 
 class HKChatViewController: UIViewController {
     var queryString: String?
-    var isSent: Boolean = false
+    var isSent: Boolean = false {
+        didSet {
+            (self.view as! HKChatView).isSent = self.isSent
+        }
+    }
     
     override func loadView() {
+        
         print("view controller loading")
         print(self.queryString)
         self.view = HKChatView()

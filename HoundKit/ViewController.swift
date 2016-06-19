@@ -7,15 +7,16 @@
 //
 
 import UIKit
+import Intents
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //let vocabulary = INVocabulary.shared()
-        //vocabulary.setVocabularyStrings(["Hound"], of: .contactName)
         // Do any additional setup after loading the view, typically from a nib.
+        let vocabulary = INVocabulary.shared()
+        vocabulary.setVocabularyStrings(["Hound", "Houndify", "HoundKit", "Alexa"], of: .contactName)
     }
 
     override func didReceiveMemoryWarning() {

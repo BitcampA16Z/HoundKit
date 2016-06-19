@@ -33,11 +33,10 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, INUIHos
     func configure(with interaction: INInteraction!, context: INUIHostedViewContext, completion: ((CGSize) -> Void)!) {
         var size: CGSize
         
-        print("configuring")
+        print("\n\nconfiguring")
         
         // Check if the interaction describes a SendMessageIntent.
         if interaction.intent is INSendMessageIntent {
-            print("is send message intent")
             // If it is, let's set up a view controller.
             let chatViewController = HKChatViewController()
             chatViewController.queryString = (interaction.intent as! INSendMessageIntent).content
@@ -45,10 +44,11 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, INUIHos
             switch interaction.intentHandlingStatus {
                 case INIntentHandlingStatus.unspecified, INIntentHandlingStatus.inProgress,INIntentHandlingStatus.ready:
                     print("interaction handling status not done...")
-                    print(interaction.intentHandlingStatus)
                     print(interaction.intentHandlingStatus.rawValue)
                     chatViewController.isSent = false
                 case INIntentHandlingStatus.done:
+                    print("interaction handling completed")
+                    print(interaction.intentHandlingStatus.rawValue)
                     chatViewController.isSent = true
             }
             
@@ -58,6 +58,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, INUIHos
         }
         else {
             // Otherwise, we'll tell the host to draw us at zero size.
+            print("Is not INSendMessageIntent")
             size = CGSize.zero
         }
         

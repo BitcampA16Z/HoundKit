@@ -14,13 +14,13 @@ class HKSendMessageIntentHandler: INExtension, INSendMessageIntentHandling {
     let NAME = "Hound"
     let APP_NAME = "HoundKit"
     
-    //    func resolveRecipients(forSendMessage intent: INSendMessageIntent, with completion: ([INPersonResolutionResult]) -> Swift.Void) {
-    //        print("forcing resolve to recipient: " + NAME)
-    //
-    //        let hound = INPerson.init(handle: NAME, displayName: NAME, contactIdentifier: NAME)
-    //        let resolutionResults = [INPersonResolutionResult.success(with: hound)]
-    //        completion(resolutionResults)
-    //    }
+        func resolveRecipients(forSendMessage intent: INSendMessageIntent, with completion: ([INPersonResolutionResult]) -> Swift.Void) {
+            print("forcing resolve to recipient: " + NAME)
+    
+            let hound = INPerson.init(handle: NAME, displayName: NAME, contactIdentifier: NAME)
+            let resolutionResults = [INPersonResolutionResult.success(with: hound)]
+            completion(resolutionResults)
+        }
     
     func resolveContent(forSendMessage intent: INSendMessageIntent, with completion: (INStringResolutionResult) -> Swift.Void) {
         print("resolving content")
