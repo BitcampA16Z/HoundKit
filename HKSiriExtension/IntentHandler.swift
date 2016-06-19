@@ -16,7 +16,7 @@ class IntentHandler: INExtension {
     
     override func handler(for intent: INIntent) -> AnyObject? {
         if intent is INSendMessageIntent {
-            return HoundKitSendMessageIntentHandler()
+            return HKSendMessageIntentHandler()
         }
         
         print("ERROR: The registered intent is not currently handled by HoundKit.")
@@ -24,4 +24,3 @@ class IntentHandler: INExtension {
         return nil
     }
 }
-

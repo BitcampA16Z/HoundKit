@@ -29,6 +29,9 @@ class HKChatView: UIView {
     var isSent: Boolean = false {
         willSet(newSentValue) {
             mockView.image = newSentValue.boolValue ? sentMock : draftMock
+            print("setting is sent")
+            print(isSent)
+            print(newSentValue)
             if newSentValue.boolValue != isSent.boolValue {
                 self.setNeedsLayout()
             }
@@ -57,6 +60,7 @@ class HKChatView: UIView {
         
         super.init(frame: frame)
         
+        print("Initing ChatView")
         self.addSubview(mockView)
         self.addSubview(contentLabel)
     }
@@ -80,50 +84,4 @@ class HKChatView: UIView {
             contentLabel.frame = CGRect(x: 113.0, y: 85.0, width: 150.0, height: 75.0)
         }
     }
-    
-    //        - (instancetype)initWithFrame:(CGRect)frame {
-    //    self = [super initWithFrame:frame];
-    //    if (self) {
-    //    _draftMock = [UIImage imageNamed:@"chatmockdraft.png"];
-    //    _sentMock = [UIImage imageNamed:@"chatmock.png"];
-    //
-    //    _mockView = [[UIImageView alloc] initWithImage:_draftMock];
-    //    [_mockView setContentMode:UIViewContentModeScaleToFill];
-    //    [self addSubview:_mockView];
-    //
-    //    _recipientLabel = [[UILabel alloc] init];
-    //    [_recipientLabel setNumberOfLines:0];
-    //    [_recipientLabel setLineBreakMode:NSLineBreakByWordWrapping];
-    //    [_recipientLabel setTextColor:[UIColor whiteColor]];
-    //    [self addSubview:_recipientLabel];
-    //
-    //    _contentLabel = [[UILabel alloc] init];
-    //    [_contentLabel setNumberOfLines:0];
-    //    [_contentLabel setLineBreakMode:NSLineBreakByWordWrapping];
-    //    [self addSubview:_contentLabel];
-    //    }
-    //    return self;
-    //}
-    
-    //    - (void)setContent:(NSString *)content {
-    //    if ([_content isEqualToString:content]) {
-    //    return;
-    //    }
-    //    _content = content;
-    //
-    //    [self setNeedsLayout];
-    //    }
-    
-    
-    
-    //    - (void)setSent:(BOOL)sent {
-    //    if (_sent == sent) {
-    //    return;
-    //    }
-    //    
-    //    _sent = sent;
-    //    
-    //    UIImage *mockImage = (_sent ? _sentMock : _draftMock);
-    //    [_mockView setImage:mockImage];
-    //    }
 }

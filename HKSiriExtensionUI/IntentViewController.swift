@@ -43,10 +43,13 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, INUIHos
             chatViewController.queryString = (interaction.intent as! INSendMessageIntent).content
             
             switch interaction.intentHandlingStatus {
-            case INIntentHandlingStatus.unspecified, INIntentHandlingStatus.inProgress,INIntentHandlingStatus.ready:
-                chatViewController.isSent = false
-            case INIntentHandlingStatus.done:
-                chatViewController.isSent = true
+                case INIntentHandlingStatus.unspecified, INIntentHandlingStatus.inProgress,INIntentHandlingStatus.ready:
+                    print("interaction handling status not done...")
+                    print(interaction.intentHandlingStatus)
+                    print(interaction.intentHandlingStatus.rawValue)
+                    chatViewController.isSent = false
+                case INIntentHandlingStatus.done:
+                    chatViewController.isSent = true
             }
             
             present(chatViewController, animated: false, completion: nil)
@@ -63,6 +66,10 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, INUIHos
     
     var desiredSize: CGSize {
         return self.extensionContext!.hostedViewMaximumAllowedSize
+    }
+    
+    var displaysMessage: Bool {
+        return true
     }
     
 }
