@@ -32,6 +32,9 @@
 		3B472CD81D165070009B70A5 /* HoundKitCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B472CD01D165070009B70A5 /* HoundKitCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3B472CDE1D1650EB009B70A5 /* HoundKitCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B472CDD1D1650EB009B70A5 /* HoundKitCore.swift */; };
 		3BAC7DEC1D17013100D95218 /* spotify-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BAC7DEB1D17013100D95218 /* spotify-bg.png */; };
+		3BAC7DF01D170B3400D95218 /* loading-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BAC7DEF1D170B3400D95218 /* loading-bg.png */; };
+		3BAC7DF21D170B3E00D95218 /* houndify-bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BAC7DF11D170B3E00D95218 /* houndify-bg2.png */; };
+		3BAC7DF41D171DCB00D95218 /* album-placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BAC7DF31D171DCB00D95218 /* album-placeholder.png */; };
 		3BF5CED41D16EA9500DF9DC4 /* reddit-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF5CED31D16EA9500DF9DC4 /* reddit-bg.png */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +119,9 @@
 		3B472CD41D165070009B70A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B472CDD1D1650EB009B70A5 /* HoundKitCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoundKitCore.swift; sourceTree = "<group>"; };
 		3BAC7DEB1D17013100D95218 /* spotify-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spotify-bg.png"; sourceTree = "<group>"; };
+		3BAC7DEF1D170B3400D95218 /* loading-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading-bg.png"; sourceTree = "<group>"; };
+		3BAC7DF11D170B3E00D95218 /* houndify-bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "houndify-bg2.png"; sourceTree = "<group>"; };
+		3BAC7DF31D171DCB00D95218 /* album-placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "album-placeholder.png"; sourceTree = "<group>"; };
 		3BF5CED31D16EA9500DF9DC4 /* reddit-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reddit-bg.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,6 +183,9 @@
 		3B0AF9621D16820F001A0B7B /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				3BAC7DF31D171DCB00D95218 /* album-placeholder.png */,
+				3BAC7DF11D170B3E00D95218 /* houndify-bg2.png */,
+				3BAC7DEF1D170B3400D95218 /* loading-bg.png */,
 				3BAC7DEB1D17013100D95218 /* spotify-bg.png */,
 				3BF5CED31D16EA9500DF9DC4 /* reddit-bg.png */,
 				3B0AF9741D1697FD001A0B7B /* query2.png */,
@@ -357,6 +366,11 @@
 						DevelopmentTeam = 33QFCS9J52;
 						DevelopmentTeamName = "Colin King (Personal Team)";
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					3B0AF9421D1680B2001A0B7B = {
 						CreatedOnToolsVersion = 8.0;
@@ -369,6 +383,11 @@
 						DevelopmentTeam = 33QFCS9J52;
 						DevelopmentTeamName = "Colin King (Personal Team)";
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					3B472CCF1D165070009B70A5 = {
 						CreatedOnToolsVersion = 8.0;
@@ -415,12 +434,15 @@
 				3BAC7DEC1D17013100D95218 /* spotify-bg.png in Resources */,
 				3B0AF9731D16964D001A0B7B /* query1.png in Resources */,
 				3B0AF95A1D1680D0001A0B7B /* chatmock.png in Resources */,
+				3BAC7DF01D170B3400D95218 /* loading-bg.png in Resources */,
 				3BF5CED41D16EA9500DF9DC4 /* reddit-bg.png in Resources */,
+				3BAC7DF41D171DCB00D95218 /* album-placeholder.png in Resources */,
 				3B0AF9691D168D61001A0B7B /* MainInterface.storyboard in Resources */,
 				3B0AF9651D1682A5001A0B7B /* houndify-bg.png in Resources */,
 				3B0AF9751D1697FD001A0B7B /* query2.png in Resources */,
 				3B0AF95B1D1680D0001A0B7B /* chatmockdraft.png in Resources */,
 				3B0AF9711D16955C001A0B7B /* chatmockdraft2.png in Resources */,
+				3BAC7DF21D170B3E00D95218 /* houndify-bg2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

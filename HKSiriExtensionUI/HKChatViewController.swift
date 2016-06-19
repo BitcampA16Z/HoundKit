@@ -23,6 +23,13 @@ class HKChatViewController: UIViewController {
             (self.view as! HKChatView).isSent = self.isSent
         }
     }
+    var jsonResponse: String? = nil {
+        didSet {
+            print("Setting jsonResponse in ViewController")
+            print(jsonResponse)
+            (self.view as! HKChatView).jsonResponse = self.jsonResponse
+        }
+    }
     
     override func loadView() {
         

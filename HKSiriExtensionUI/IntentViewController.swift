@@ -33,7 +33,6 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, INUIHos
     
     // Prepare your view controller for the interaction to handle.
     func configure(with interaction: INInteraction!, context: INUIHostedViewContext, completion: ((CGSize) -> Void)!) {
-        var size: CGSize
         
         print("\n\nconfiguring")
         
@@ -47,34 +46,61 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, INUIHos
             }
             
             let content = (interaction.intent as! INSendMessageIntent).content
+            chatViewController!.queryString = content
             if content != nil {
                 print("Content: " + content!)
+                let serverURL = "https://colinkinghoundkit.localtunnel.me/"
+                var request = URLRequest(url: URL(string: serverURL)!)
+                request.httpMethod = "POST"
+                let postString = "message=" + content!
+                request.httpBody = postString.data(using: String.Encoding.utf8)
+                let task = URLSession.shared().dataTask(with: request) { data, response, error in
+                    print("returned from URL")
+                    guard error == nil && data != nil else { // check for fundamental networking error
+                        print("error=\(error)")
+                        return
+                    }
+                    
+                    if let httpStatus = response as? HTTPURLResponse where httpStatus.statusCode != 200 { // check for http errors
+                        print("statusCode should be 200, but is \(httpStatus.statusCode)")
+                        print("response = \(response)")
+                    }
+                    
+                    let responseString = String(data: data!, encoding: String.Encoding.utf8)
+                    print("responseString = \(responseString)")
+                    
+                    self.chatViewController!.jsonResponse = responseString
+                    
+                    completion(self.desiredSize)
+                }
+                task.resume()
+                print("resuming task to " + serverURL + " for query: " + content!)
             } else {
-                print("No content")
+                print("No content -- not sending request to server")
+                completion(desiredSize)
             }
             
-            chatViewController!.queryString = content
             
-            switch interaction.intentHandlingStatus {
-                case INIntentHandlingStatus.unspecified, INIntentHandlingStatus.inProgress,INIntentHandlingStatus.ready:
-                    print("interaction handling status not done...")
-                    print(interaction.intentHandlingStatus.rawValue)
-                    chatViewController!.isSent = false
-                case INIntentHandlingStatus.done:
-                    print("interaction handling completed")
-                    print(interaction.intentHandlingStatus.rawValue)
-                    chatViewController!.isSent = true
-            }
             
-            size = desiredSize
+//            switch interaction.intentHandlingStatus {
+//                case INIntentHandlingStatus.unspecified, INIntentHandlingStatus.inProgress,INIntentHandlingStatus.ready:
+//                    print("interaction handling status not done...")
+//                    print(interaction.intentHandlingStatus.rawValue)
+//                    chatViewController!.isSent = false
+//                case INIntentHandlingStatus.done:
+//                    print("interaction handling completed")
+//                    print(interaction.intentHandlingStatus.rawValue)
+//                    chatViewController!.isSent = true
+//            }
+            
         }
         else {
             // Otherwise, we'll tell the host to draw us at zero size.
             print("Is not INSendMessageIntent")
-            size = CGSize.zero
+            completion(CGSize.zero)
         }
         
-        completion(size)
+        
     }
     
     var desiredSize: CGSize {
