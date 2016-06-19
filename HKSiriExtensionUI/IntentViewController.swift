@@ -17,6 +17,8 @@ import IntentsUI
 
 class IntentViewController: UIViewController, INUIHostedViewControlling, INUIHostedViewSiriProviding {
     
+    var chatViewController: HKChatViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -38,21 +40,31 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, INUIHos
         // Check if the interaction describes a SendMessageIntent.
         if interaction.intent is INSendMessageIntent {
             // If it is, let's set up a view controller.
-            let chatViewController = HKChatViewController()
-            chatViewController.queryString = (interaction.intent as! INSendMessageIntent).content
+            if (chatViewController == nil) {
+                print("init-ing view controller in intentVC")
+                chatViewController = HKChatViewController()
+                present(chatViewController!, animated: false, completion: nil)
+            }
+            
+            let content = (interaction.intent as! INSendMessageIntent).content
+            if content != nil {
+                print("Content: " + content!)
+            } else {
+                print("No content")
+            }
+            
+            chatViewController!.queryString = content
             
             switch interaction.intentHandlingStatus {
                 case INIntentHandlingStatus.unspecified, INIntentHandlingStatus.inProgress,INIntentHandlingStatus.ready:
                     print("interaction handling status not done...")
                     print(interaction.intentHandlingStatus.rawValue)
-                    chatViewController.isSent = false
+                    chatViewController!.isSent = false
                 case INIntentHandlingStatus.done:
                     print("interaction handling completed")
                     print(interaction.intentHandlingStatus.rawValue)
-                    chatViewController.isSent = true
+                    chatViewController!.isSent = true
             }
-            
-            present(chatViewController, animated: false, completion: nil)
             
             size = desiredSize
         }

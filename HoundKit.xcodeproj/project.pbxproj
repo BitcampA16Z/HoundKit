@@ -31,6 +31,8 @@
 		3B472CD71D165070009B70A5 /* HoundKitCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B472CD01D165070009B70A5 /* HoundKitCore.framework */; };
 		3B472CD81D165070009B70A5 /* HoundKitCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B472CD01D165070009B70A5 /* HoundKitCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3B472CDE1D1650EB009B70A5 /* HoundKitCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B472CDD1D1650EB009B70A5 /* HoundKitCore.swift */; };
+		3BAC7DEC1D17013100D95218 /* spotify-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BAC7DEB1D17013100D95218 /* spotify-bg.png */; };
+		3BF5CED41D16EA9500DF9DC4 /* reddit-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3BF5CED31D16EA9500DF9DC4 /* reddit-bg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,8 @@
 		3B472CD21D165070009B70A5 /* HoundKitCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HoundKitCore.h; sourceTree = "<group>"; };
 		3B472CD41D165070009B70A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B472CDD1D1650EB009B70A5 /* HoundKitCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoundKitCore.swift; sourceTree = "<group>"; };
+		3BAC7DEB1D17013100D95218 /* spotify-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spotify-bg.png"; sourceTree = "<group>"; };
+		3BF5CED31D16EA9500DF9DC4 /* reddit-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reddit-bg.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,8 @@
 		3B0AF9621D16820F001A0B7B /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				3BAC7DEB1D17013100D95218 /* spotify-bg.png */,
+				3BF5CED31D16EA9500DF9DC4 /* reddit-bg.png */,
 				3B0AF9741D1697FD001A0B7B /* query2.png */,
 				3B0AF9721D16964D001A0B7B /* query1.png */,
 				3B0AF9701D16955C001A0B7B /* chatmockdraft2.png */,
@@ -406,8 +412,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BAC7DEC1D17013100D95218 /* spotify-bg.png in Resources */,
 				3B0AF9731D16964D001A0B7B /* query1.png in Resources */,
 				3B0AF95A1D1680D0001A0B7B /* chatmock.png in Resources */,
+				3BF5CED41D16EA9500DF9DC4 /* reddit-bg.png in Resources */,
 				3B0AF9691D168D61001A0B7B /* MainInterface.storyboard in Resources */,
 				3B0AF9651D1682A5001A0B7B /* houndify-bg.png in Resources */,
 				3B0AF9751D1697FD001A0B7B /* query2.png in Resources */,
@@ -730,6 +738,7 @@
 				3B0AF9541D1680B2001A0B7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B0AF9551D1680B2001A0B7B /* Build configuration list for PBXNativeTarget "HKSiriExtension" */ = {
 			isa = XCConfigurationList;
@@ -738,6 +747,7 @@
 				3B0AF9571D1680B2001A0B7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B4671241D1641D8009375C4 /* Build configuration list for PBXProject "HoundKit" */ = {
 			isa = XCConfigurationList;

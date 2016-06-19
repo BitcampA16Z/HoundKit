@@ -47,10 +47,32 @@ class HKSendMessageIntentHandler: INExtension, INSendMessageIntentHandling {
         completion(response)
     }
     
-    func sendMessage(query: NSString) {
+    func sendMessage(query: String) {
         print("Sending message")
         print(query)
         // Send this message to the API server, retrieve response
+        
+        var request = URLRequest(url: URL(string: "https://tjakejattl.localtunnel.me/")!)
+        request.httpMethod = "POST"
+        let postString = "message=" + query
+        request.httpBody = postString.data(using: String.Encoding.utf8)
+        let task = URLSession.shared().dataTask(with: request) { data, response, error in
+            print("returned from URL")
+            guard error == nil && data != nil else { // check for fundamental networking error
+                print("error=\(error)")
+                return
+            }
+            
+            if let httpStatus = response as? HTTPURLResponse where httpStatus.statusCode != 200 { // check for http errors
+                print("statusCode should be 200, but is \(httpStatus.statusCode)")
+                print("response = \(response)")
+            }
+            
+            let responseString = String(data: data!, encoding: String.Encoding.utf8)
+            print("responseString = \(responseString)")
+        }
+        task.resume()
+        print("resuming task")
         
     }
 }

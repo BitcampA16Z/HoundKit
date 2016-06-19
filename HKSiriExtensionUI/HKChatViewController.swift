@@ -9,9 +9,17 @@
 import UIKit
 
 class HKChatViewController: UIViewController {
-    var queryString: String?
+    var queryString: String?  {
+        didSet {
+            print("Setting queryString (aka content) in ViewController")
+            print(queryString)
+            (self.view as! HKChatView).content = self.queryString
+        }
+    }
     var isSent: Boolean = false {
         didSet {
+            print("Setting isSent in ViewController")
+            print(isSent)
             (self.view as! HKChatView).isSent = self.isSent
         }
     }

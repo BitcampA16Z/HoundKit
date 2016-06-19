@@ -24,7 +24,8 @@ class HKChatView: UIView {
             print("content set")
             print(newContent)
             if newContent != content {
-//                self.setNeedsLayout()
+                print("needs layout")
+                self.setNeedsLayout()
             }
         }
     }
@@ -34,7 +35,7 @@ class HKChatView: UIView {
             mockView.image = newSentValue.boolValue ? sentMock : draftMock
             print("setting isSent: " + isSent.boolValue.description + " -> " + newSentValue.boolValue.description)
             if newSentValue.boolValue != isSent.boolValue {
-//                self.setNeedsLayout()
+                self.setNeedsLayout()
             }
         }
     }
@@ -49,7 +50,7 @@ class HKChatView: UIView {
     }
     
     override init (frame: CGRect) {
-        draftMock = HKChatView.resolveImage(imageName: "query2.png")
+        draftMock = HKChatView.resolveImage(imageName: "spotify-bg.png")
         sentMock = HKChatView.resolveImage(imageName: "chatmock.png")
         
         mockView = UIImageView(image: draftMock)
@@ -61,6 +62,8 @@ class HKChatView: UIView {
         
         self.addSubview(mockView)
         self.addSubview(queryLabel)
+        
+        print("isSent value in init: " + (self.isSent.boolValue ? "YES" : "NO"))
         
         addViewContent()
     }
