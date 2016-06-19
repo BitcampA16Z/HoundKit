@@ -198,10 +198,10 @@
 			children = (
 				3BA43C331D165BF900BF083C /* Assets */,
 				3B4671521D164246009375C4 /* MainInterface.storyboard */,
+				3B84263B1D166B4D006DFA0C /* IntentViewController.swift */,
 				3B4671551D164246009375C4 /* Info.plist */,
 				3BA43C341D16666300BF083C /* HKChatView.swift */,
 				3B8426391D1669B5006DFA0C /* HKChatViewController.swift */,
-				3B84263B1D166B4D006DFA0C /* IntentViewController.swift */,
 			);
 			path = HoundKitSiriExtensionUI;
 			sourceTree = "<group>";

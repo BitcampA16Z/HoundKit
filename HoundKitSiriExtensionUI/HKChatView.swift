@@ -18,6 +18,8 @@ class HKChatView: UIView {
     
     var content: String? {
         willSet(newContent) {
+            print("content set")
+            print(newContent)
             if newContent != content {
                 self.setNeedsLayout()
             }
@@ -35,14 +37,14 @@ class HKChatView: UIView {
     
     static func resolveImage(imageName: String) -> UIImage {
         if UIImage(named: imageName) != nil {
+            print("image loaded: " + imageName)
             return UIImage(named: imageName)!
         } else {
             fatalError("ERROR: The image named '" + imageName + "' could not be found.")
         }
     }
     
-    override init (frame : CGRect) {
-        
+    override init (frame: CGRect) {
         draftMock = HKChatView.resolveImage(imageName: "chatmockdraft.png")
         sentMock = HKChatView.resolveImage(imageName: "chatmock.png")
         
@@ -53,13 +55,14 @@ class HKChatView: UIView {
         contentLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         contentLabel.numberOfLines = 0
         
-        super.init(frame : frame)
+        super.init(frame: frame)
         
         self.addSubview(mockView)
         self.addSubview(contentLabel)
     }
     
     convenience init () {
+        print("convenience constructor")
         self.init(frame:CGRect.zero)
     }
     
@@ -69,7 +72,8 @@ class HKChatView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
+        print("laying out subviews")
+        print(content)
         mockView.frame = self.bounds
         if let content = self.content {
             contentLabel.text = content

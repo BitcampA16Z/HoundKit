@@ -33,8 +33,11 @@ class IntentViewController: UIViewController, INUIHostedViewControlling, INUIHos
     func configure(with interaction: INInteraction!, context: INUIHostedViewContext, completion: ((CGSize) -> Void)!) {
         var size: CGSize
         
+        print("configuring")
+        
         // Check if the interaction describes a SendMessageIntent.
         if interaction.intent is INSendMessageIntent {
+            print("is send message intent")
             // If it is, let's set up a view controller.
             let chatViewController = HKChatViewController()
             chatViewController.queryString = (interaction.intent as! INSendMessageIntent).content
