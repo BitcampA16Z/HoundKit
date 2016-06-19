@@ -16,6 +16,8 @@ class HKChatView: UIView {
     var draftMock: UIImage
     var sentMock: UIImage
     
+    let DEBUG_COLORS = false
+    
     var content: String? {
         willSet(newContent) {
             print("content set")
@@ -63,13 +65,22 @@ class HKChatView: UIView {
         print("Initing ChatView")
         
         let queryLabel = UILabel()
-        queryLabel.numberOfLines = 1
-        queryLabel.text = "QUERY:"
+        queryLabel.frame = CGRect(x: 0.0, y: 0.0, width: 345.0, height: 170.0)
+        
+        queryLabel.numberOfLines = 0
+        queryLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
+        queryLabel.text = "Ask me anything..."
         queryLabel.font = UIFont(name: "KohinoorBangla-Semibold", size: 24.0)
-        queryLabel.frame = CGRect(x: 10.0, y: 45.0, width: 100.0, height: 40.0)
+        queryLabel.textAlignment = NSTextAlignment.center
+
+        if DEBUG_COLORS {
+            queryLabel.backgroundColor = UIColor(red: 0.5, green: 0.1, blue: 0.7, alpha: 0.5)
+            queryLabel.layer.borderWidth = 3.0
+            queryLabel.layer.borderColor = UIColor(red: 0.5, green: 0.1, blue: 0.7, alpha: 0.8).cgColor
+        }
         
         self.addSubview(mockView)
-//        self.addSubview(queryLabel)
+        self.addSubview(queryLabel)
         self.addSubview(contentLabel)
     }
     
@@ -80,20 +91,6 @@ class HKChatView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("This class does not support NSCoding")
-//        draftMock = HKChatView.resolveImage(imageName: "houndify-bg")
-//        sentMock = HKChatView.resolveImage(imageName: "chatmock.png")
-//        
-//        mockView = UIImageView(image: draftMock)
-//        mockView.contentMode = UIViewContentMode.scaleAspectFill
-//        
-//        contentLabel = UILabel()
-//        contentLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
-//        contentLabel.numberOfLines = 0
-//        
-//        super.init(coder: aDecoder)
-//        
-//        print("Initing ChatView")
-//        print("Well hoping for the storyboard -- decoder")
     }
     
     func commonInit() {
