@@ -13,6 +13,8 @@ class HKChatView: UIView {
     var contentLabel: UILabel
     var mockView: UIImageView
     
+    var queryLabel: UILabel
+    
     var draftMock: UIImage
     var sentMock: UIImage
     
@@ -60,28 +62,17 @@ class HKChatView: UIView {
         contentLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         contentLabel.numberOfLines = 0
         
+        queryLabel = UILabel()
+        
         super.init(frame: frame)
         
         print("Initing ChatView")
         
-        let queryLabel = UILabel()
-        queryLabel.frame = CGRect(x: 0.0, y: 0.0, width: 345.0, height: 170.0)
-        
-        queryLabel.numberOfLines = 0
-        queryLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
-        queryLabel.text = "Ask me anything..."
-        queryLabel.font = UIFont(name: "KohinoorBangla-Semibold", size: 24.0)
-        queryLabel.textAlignment = NSTextAlignment.center
-
-        if DEBUG_COLORS {
-            queryLabel.backgroundColor = UIColor(red: 0.5, green: 0.1, blue: 0.7, alpha: 0.5)
-            queryLabel.layer.borderWidth = 3.0
-            queryLabel.layer.borderColor = UIColor(red: 0.5, green: 0.1, blue: 0.7, alpha: 0.8).cgColor
-        }
-        
         self.addSubview(mockView)
-        self.addSubview(queryLabel)
         self.addSubview(contentLabel)
+        self.addSubview(queryLabel)
+        
+        addViewContent()
     }
     
     convenience init () {
@@ -93,8 +84,27 @@ class HKChatView: UIView {
         fatalError("This class does not support NSCoding")
     }
     
-    func commonInit() {
+    func addViewContent() {
+        queryLabel.frame = CGRect(x: 0.0, y: 0.0, width: 345.0, height: 170.0)
         
+        queryLabel.numberOfLines = 0
+        queryLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
+        queryLabel.font = UIFont(name: "KohinoorBangla-Semibold", size: 24.0)
+        queryLabel.textAlignment = NSTextAlignment.center
+        
+        if let content = self.content {
+            queryLabel.text = content
+//            contentLabel.text = content
+//            contentLabel.frame = CGRect(x: 113.0, y: 85.0, width: 150.0, height: 75.0)
+        } else {
+            queryLabel.text = "Ask me anything..."
+        }
+        
+        if DEBUG_COLORS {
+            queryLabel.backgroundColor = UIColor(red: 0.5, green: 0.1, blue: 0.7, alpha: 0.5)
+            queryLabel.layer.borderWidth = 3.0
+            queryLabel.layer.borderColor = UIColor(red: 0.5, green: 0.1, blue: 0.7, alpha: 0.8).cgColor
+        }
     }
     
     override func layoutSubviews() {
@@ -102,9 +112,7 @@ class HKChatView: UIView {
         print("laying out subviews")
         print(content)
         mockView.frame = self.bounds
-        if let content = self.content {
-            contentLabel.text = content
-            contentLabel.frame = CGRect(x: 113.0, y: 85.0, width: 150.0, height: 75.0)
-        }
+        
+        addViewContent()
     }
 }
