@@ -15,7 +15,7 @@ import IntentsUI
 // You can test this example integration by saying things to Siri like:
 // "Start my workout using <myApp>"
 
-class IntentViewController: UIViewController, INUIHostedViewControlling {
+class IntentViewController: UIViewController, INUIHostedViewControlling, INUIHostedViewSiriProviding {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,11 +31,31 @@ class IntentViewController: UIViewController, INUIHostedViewControlling {
     
     // Prepare your view controller for the interaction to handle.
     func configure(with interaction: INInteraction!, context: INUIHostedViewContext, completion: ((CGSize) -> Void)!) {
-        // Do configuration here, including preparing views and calculating a desired size for presentation.
+        var size: CGSize
         
-        if let completion = completion {
-            completion(self.desiredSize)
+        // Check if the interaction describes a SendMessageIntent.
+        if interaction.intent is INSendMessageIntent {
+            // If it is, let's set up a view controller.
+            let chatViewController = HKChatViewController()
+            chatViewController.queryString = (interaction.intent as! INSendMessageIntent).content
+            
+            switch interaction.intentHandlingStatus {
+            case INIntentHandlingStatus.unspecified, INIntentHandlingStatus.inProgress,INIntentHandlingStatus.ready:
+                chatViewController.isSent = false
+            case INIntentHandlingStatus.done:
+                chatViewController.isSent = true
+            }
+            
+            present(chatViewController, animated: false, completion: nil)
+            
+            size = desiredSize
         }
+        else {
+            // Otherwise, we'll tell the host to draw us at zero size.
+            size = CGSize.zero
+        }
+        
+        completion(size)
     }
     
     var desiredSize: CGSize {

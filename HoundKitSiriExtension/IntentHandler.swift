@@ -19,7 +19,7 @@ class IntentHandler: INExtension {
             return HoundKitSendMessageIntentHandler()
         }
         
-        print("ERROR: The registered intent is not currently handled by AlexaKit.")
+        print("ERROR: The registered intent is not currently handled by HoundKit.")
         
         return nil
     }
