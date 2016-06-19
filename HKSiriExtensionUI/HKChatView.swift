@@ -48,7 +48,7 @@ class HKChatView: UIView {
     }
     
     override init (frame: CGRect) {
-        draftMock = HKChatView.resolveImage(imageName: "chatmockdraft.png")
+        draftMock = HKChatView.resolveImage(imageName: "houndify-bg")
         sentMock = HKChatView.resolveImage(imageName: "chatmock.png")
         
         mockView = UIImageView(image: draftMock)
@@ -61,6 +61,7 @@ class HKChatView: UIView {
         super.init(frame: frame)
         
         print("Initing ChatView")
+        print("Well hoping for the storyboard")
         self.addSubview(mockView)
         self.addSubview(contentLabel)
     }
@@ -72,6 +73,24 @@ class HKChatView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("This class does not support NSCoding")
+//        draftMock = HKChatView.resolveImage(imageName: "houndify-bg")
+//        sentMock = HKChatView.resolveImage(imageName: "chatmock.png")
+//        
+//        mockView = UIImageView(image: draftMock)
+//        mockView.contentMode = UIViewContentMode.scaleAspectFill
+//        
+//        contentLabel = UILabel()
+//        contentLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
+//        contentLabel.numberOfLines = 0
+//        
+//        super.init(coder: aDecoder)
+//        
+//        print("Initing ChatView")
+//        print("Well hoping for the storyboard -- decoder")
+    }
+    
+    func commonInit() {
+        
     }
     
     override func layoutSubviews() {

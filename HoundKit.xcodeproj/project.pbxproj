@@ -10,7 +10,6 @@
 		3B0AF93D1D1680B1001A0B7B /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0AF93C1D1680B1001A0B7B /* IntentHandler.swift */; };
 		3B0AF9441D1680B2001A0B7B /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B46714D1D164246009375C4 /* IntentsUI.framework */; };
 		3B0AF9471D1680B2001A0B7B /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0AF9461D1680B2001A0B7B /* IntentViewController.swift */; };
-		3B0AF94A1D1680B2001A0B7B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0AF9481D1680B2001A0B7B /* MainInterface.storyboard */; };
 		3B0AF94E1D1680B2001A0B7B /* HKSiriExtensionUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3B0AF9431D1680B2001A0B7B /* HKSiriExtensionUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3B0AF9511D1680B2001A0B7B /* HKSiriExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3B0AF93A1D1680B1001A0B7B /* HKSiriExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3B0AF95A1D1680D0001A0B7B /* chatmock.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0AF9581D1680D0001A0B7B /* chatmock.png */; };
@@ -19,6 +18,7 @@
 		3B0AF95F1D1680F8001A0B7B /* HKChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0AF95D1D1680F8001A0B7B /* HKChatViewController.swift */; };
 		3B0AF9611D1681C4001A0B7B /* HKSendMessageIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0AF9601D1681C4001A0B7B /* HKSendMessageIntentHandler.swift */; };
 		3B0AF9651D1682A5001A0B7B /* houndify-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B0AF9641D1682A5001A0B7B /* houndify-bg.png */; };
+		3B0AF9691D168D61001A0B7B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0AF9681D168D61001A0B7B /* MainInterface.storyboard */; };
 		3B46712D1D1641D8009375C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B46712C1D1641D8009375C4 /* AppDelegate.swift */; };
 		3B46712F1D1641D8009375C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B46712E1D1641D8009375C4 /* ViewController.swift */; };
 		3B4671321D1641D8009375C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B4671301D1641D8009375C4 /* Main.storyboard */; };
@@ -86,7 +86,6 @@
 		3B0AF93E1D1680B2001A0B7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B0AF9431D1680B2001A0B7B /* HKSiriExtensionUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HKSiriExtensionUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B0AF9461D1680B2001A0B7B /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
-		3B0AF9491D1680B2001A0B7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		3B0AF94B1D1680B2001A0B7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B0AF9581D1680D0001A0B7B /* chatmock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatmock.png; sourceTree = "<group>"; };
 		3B0AF9591D1680D0001A0B7B /* chatmockdraft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chatmockdraft.png; sourceTree = "<group>"; };
@@ -94,6 +93,7 @@
 		3B0AF95D1D1680F8001A0B7B /* HKChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKChatViewController.swift; sourceTree = "<group>"; };
 		3B0AF9601D1681C4001A0B7B /* HKSendMessageIntentHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKSendMessageIntentHandler.swift; sourceTree = "<group>"; };
 		3B0AF9641D1682A5001A0B7B /* houndify-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "houndify-bg.png"; sourceTree = "<group>"; };
+		3B0AF9681D168D61001A0B7B /* MainInterface.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		3B4671291D1641D8009375C4 /* HoundKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoundKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B46712C1D1641D8009375C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B46712E1D1641D8009375C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -166,8 +166,8 @@
 		3B0AF9621D16820F001A0B7B /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				3B0AF9681D168D61001A0B7B /* MainInterface.storyboard */,
 				3B0AF9641D1682A5001A0B7B /* houndify-bg.png */,
-				3B0AF9481D1680B2001A0B7B /* MainInterface.storyboard */,
 				3B0AF94B1D1680B2001A0B7B /* Info.plist */,
 				3B0AF9581D1680D0001A0B7B /* chatmock.png */,
 				3B0AF9591D1680D0001A0B7B /* chatmockdraft.png */,
@@ -395,8 +395,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B0AF94A1D1680B2001A0B7B /* MainInterface.storyboard in Resources */,
 				3B0AF95A1D1680D0001A0B7B /* chatmock.png in Resources */,
+				3B0AF9691D168D61001A0B7B /* MainInterface.storyboard in Resources */,
 				3B0AF9651D1682A5001A0B7B /* houndify-bg.png in Resources */,
 				3B0AF95B1D1680D0001A0B7B /* chatmockdraft.png in Resources */,
 			);
@@ -479,14 +479,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3B0AF9481D1680B2001A0B7B /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3B0AF9491D1680B2001A0B7B /* Base */,
-			);
-			name = MainInterface.storyboard;
-			sourceTree = "<group>";
-		};
 		3B4671301D1641D8009375C4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
